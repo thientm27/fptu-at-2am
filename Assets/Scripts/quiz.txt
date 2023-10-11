@@ -1,0 +1,247 @@
+﻿{
+ "arrQuestions": [
+    {
+        "Subject": "PRM",
+        "Title": "Which source of documentation is the official documentation for Android developers?",
+        "OptionA": "stackoverflow.com",
+        "OptionB": "officialandroid.blogspot.com",
+        "OptionC": "github.com",
+        "OptionD": "developer.android.com",
+        "CorrectAnswer": "D"
+    },
+    {
+        "Subject": "PRM",
+        "Title": "Which lifecycle method is called to make an activity visible?",
+        "OptionA": "onPause()",
+        "OptionB": "onVisible()",
+        "OptionC": "onDestroy()",
+        "OptionD": "onStart()",
+        "CorrectAnswer": "D"
+    },
+    {
+        "Subject": "PRM",
+        "Title": "Which is not a Android resource?",
+        "OptionA": "xml",
+        "OptionB": "menu",
+        "OptionC": "image",
+        "OptionD": "drawable",
+        "CorrectAnswer": "C"
+    },
+    {
+        "Subject": "PRM",
+        "Title": "What is Android?",
+        "OptionA": "Desktop Operating System",
+        "OptionB": "Distributed Database",
+        "OptionC": "Mobile Operating System",
+        "OptionD": "Programming Language",
+        "CorrectAnswer": "C"
+    },
+    {
+        "Subject": "PRM",
+        "Title": "What is not Components of a Screen?\n\nSelect one:",
+        "OptionA": "Fragment",
+        "OptionB": "Activity",
+        "OptionC": "Layout",
+        "OptionD": "View",
+        "CorrectAnswer": "B"
+    },
+    {
+        "Subject": "PRU",
+        "Title": "The Min Distance and Max Distance values allow you to set a ____ range?",
+        "OptionA": "Object",
+        "OptionB": "Distance",
+        "OptionC": "Color",
+        "OptionD": "Light",
+        "CorrectAnswer": "B"
+    },
+    {
+        "Subject": "PRU",
+        "Title": "The Audio Listener acts as a master switch to _____ sound in a scene?",
+        "OptionA": "Play",
+        "OptionB": "Enable",
+        "OptionC": "Load",
+        "OptionD": "Change",
+        "CorrectAnswer": "B"
+    },
+    {
+        "Subject": "PRU",
+        "Title": "Unity's networking has a \"high-level\" __ API?",
+        "OptionA": "Scripting",
+        "OptionB": "Language",
+        "OptionC": "Tool",
+        "OptionD": "SDK",
+        "CorrectAnswer": "A"
+    },
+    {
+        "Subject": "PRU",
+        "Title": "Which function is called for each object in the scene at the time when the scene loads?",
+        "OptionA": "void Init() { .. }",
+        "OptionB": "void Awake() { .. }",
+        "OptionC": "void Wake() { ..}",
+        "OptionD": "void Start() { .. }",
+        "CorrectAnswer": "B"
+    },
+    {
+        "Subject": "PRU",
+        "Title": "Unity supports the file types of __ and Blender by converting them internally into FBX format?",
+        "OptionA": "3ds Max",
+        "OptionB": "Maya",
+        "OptionC": "C4D",
+        "OptionD": "All of the above",
+        "CorrectAnswer": "D"
+    },
+    {
+        "Subject": "SWD",
+        "Title": "What is software modeling?",
+        "OptionA": "Developing models of software.",
+        "OptionB": "Designing software applications before coding.",
+        "OptionC": "Developing software diagrams.",
+        "OptionD": "Developing software prototypes.",
+        "CorrectAnswer": "B"
+    },
+    {
+        "Subject": "SWD",
+        "Title": "What is the Unified Modeling Language?",
+        "OptionA": "A programming language for describing object-oriented models.",
+        "OptionB": "A diagramming tool for drawing object-oriented models.",
+        "OptionC": "A graphical language for describing object-oriented models.",
+        "OptionD": "A standardized graphical language and notation for describing objectoriented models.",
+        "CorrectAnswer": "D"
+    },
+    {
+        "Subject": "SWD",
+        "Title": "What is a software architecture?",
+        "OptionA": "The software inside a building.",
+        "OptionB": "The structure of a client/server system.",
+        "OptionC": "The overall structure of a software system.",
+        "OptionD": "The software classes and their relationships.",
+        "CorrectAnswer": "C"
+    },
+    {
+        "Subject": "SWD",
+        "Title": "What is \"white box\" testing?",
+        "OptionA": "Unit testing",
+        "OptionB": "Integration testing",
+        "OptionC": "Testing with knowledge of the system internals",
+        "OptionD": "Testing without knowledge of the software internals",
+        "CorrectAnswer": "C"
+    },
+    {
+        "Subject": "SWD",
+        "Title": "What is \"black box\" testing?",
+        "OptionA": "System testing",
+        "OptionB": "Integration testing",
+        "OptionC": "Testing with knowledge of the system internals",
+        "OptionD": "Testing without knowledge of the software internals",
+        "CorrectAnswer": "D"
+    },
+    {
+        "Subject": "SWD",
+        "Title": "What is a use case?",
+        "OptionA": "A case study involving users",
+        "OptionB": "A sequence of interactions between the user and the system",
+        "OptionC": "A sequence of interactions between the user and the objects in the system",
+        "OptionD": "A sequence of user inputs to the system",
+        "CorrectAnswer": "C"
+    },
+    {
+        "Subject": "PRN",
+        "Title": "ASP.NET Core SignalR support two protocols for encoding message. Each protocol has serialization configuration options. Please choose the correct protocols.",
+        "OptionA": "JSON and MessagePack",
+        "OptionB": "BSON and MessagePack",
+        "OptionC": "JSON and BSON",
+        "OptionD": "JSON and XML",
+        "CorrectAnswer": "A"
+    },
+    {
+        "Subject": "PRN",
+        "Title": "which of the following ways can be used to implement the Dependency Injection in the .NET application?",
+        "OptionA": "All of others",
+        "OptionB": "Constructor Injection",
+        "OptionC": "Method Injection",
+        "OptionD": "Property Injection",
+        "CorrectAnswer": "A"
+    },
+    {
+        "Subject": "PRN",
+        "Title": "choose the correct statement related to the solid principles is true?",
+        "OptionA": "All the others",
+        "OptionB": "Solid is a popular set of the design principles that are used in object-oriented software development",
+        "OptionC": "The SOLID principle were developed by Robert c martin in a 2000...",
+        "OptionD": "Solid is an acronym that stands for five keys design principle: single responsibility principle... principle, liskov substitution principle, interface segregation and dependency...",
+        "CorrectAnswer": "A"
+    },
+    {
+        "Subject": "PRN",
+        "Title": "Which of the following is one of the Creational Design Patterns?",
+        "OptionA": "Decorator",
+        "OptionB": "Singleton",
+        "OptionC": "Adapter",
+        "OptionD": "All of the others",
+        "CorrectAnswer": "B"
+    },
+    {
+        "Subject": "PRN",
+        "Title": "Which of the following keywords meaning access is limited in the same assembly but not outside the assembly?",
+        "OptionA": "private",
+        "OptionB": "protected internal",
+        "OptionC": "internal",
+        "OptionD": "public",
+        "CorrectAnswer": "C"
+    },
+    {
+        "Subject": "PRN",
+        "Title": "Which of the following keywords is used to extend or modify the abstract or virtual implementation of an inherited method, property, or event?",
+        "OptionA": "abstract",
+        "OptionB": "override",
+        "OptionC": "sealed",
+        "OptionD": "virtual",
+        "CorrectAnswer": "B"
+    },
+    {
+        "Subject": "EXE",
+        "Title": "What is a startup?",
+        "OptionA": "A well-established and profitable company",
+        "OptionB": "A newly established business with high growth potential",
+        "OptionC": "A non-profit organization",
+        "OptionD": "A government-owned enterprise",
+        "CorrectAnswer": "B"
+    },
+    {
+        "Subject": "EXE",
+        "Title": "Do you want to do a startup?",
+        "OptionA": "Yes",
+        "OptionB": "No",
+        "OptionC": "Never",
+        "OptionD": "Next life",
+        "CorrectAnswer": "A"
+    },
+    {
+        "Subject": "EXE",
+        "Title": "What is a business incubator?",
+        "OptionA": "A small office space for entrepreneurs",
+        "OptionB": "A legal document outlining a company's goals",
+        "OptionC": "A program that provides support and resources to startups",
+        "OptionD": "A financial model used to forecast revenue",
+        "CorrectAnswer": "C"
+    },
+    {
+        "Subject": "EXE",
+        "Title": "What is the main purpose of a pitch deck in the startup world?",
+        "OptionA": "To showcase the company's product or service",
+        "OptionB": "To secure funding from investors",
+        "OptionC": "To outline the company's organizational structure",
+        "OptionD": "To create a marketing strategy",
+        "CorrectAnswer": "B"
+    },
+    {
+        "Subject": "EXE",
+        "Title": "What does the term 'bootstrapping' mean in the context of startups?",
+        "OptionA": "Wearing boots to work in a startup environment",
+        "OptionB": "Using personal savings or revenue to fund a business",
+        "OptionC": "Hiring new employees quickly to scale the company",
+        "OptionD": "Collaborating with other startups in the same industry",
+        "CorrectAnswer": "B"
+    }
+]
+}

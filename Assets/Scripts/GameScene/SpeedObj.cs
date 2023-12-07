@@ -7,14 +7,14 @@ namespace GameScene
         public GameObject speedObject;
         public SC_FPSController fpsController;
         public AudioSource pickupSound;
-        private bool interactable;
-        private bool isBoosting = false;
+        private bool _interactable;
+        private bool _isBoosting = false;
 
         void OnTriggerStay(Collider other)
         {
             if (other.CompareTag("Player"))
             {
-                interactable = true;
+                _interactable = true;
             }
         }
 
@@ -22,7 +22,7 @@ namespace GameScene
         {
             if (other.CompareTag("Player"))
             {
-                interactable = false;
+                _interactable = false;
             }
         }
 
@@ -32,13 +32,13 @@ namespace GameScene
         // Update is called once per frame
         void Update()
         {
-            if (interactable && !isBoosting)
+            if (_interactable && !_isBoosting)
             {
-                isBoosting = true;
+                _isBoosting = true;
                 speedObject.SetActive(true);
                 this.gameObject.SetActive(false);
                 pickupSound.Play();
-                interactable = false;
+                _interactable = false;
 
                 _originalWalkingSpeed = fpsController.walkingSpeed;
                 _originalRunningSpeed = fpsController.runningSpeed;
@@ -55,7 +55,7 @@ namespace GameScene
             fpsController.walkingSpeed = _originalWalkingSpeed;
             fpsController.runningSpeed = _originalRunningSpeed;
 
-            isBoosting = false;
+            _isBoosting = false;
             speedObject.SetActive(false);
         }
     }

@@ -6,25 +6,25 @@ namespace GameScene.Components
         public AudioClip hoverSound;
         public AudioClip clickSound;
         public AudioClip exitSound;
-        private AudioSource audioSource;
+        private AudioSource _audioSource;
 
         private void Start() {
-            audioSource = GetComponent<AudioSource>();
+            _audioSource = GetComponent<AudioSource>();
 
-            if (audioSource == null) {
-                audioSource = gameObject.AddComponent<AudioSource>();
+            if (_audioSource == null) {
+                _audioSource = gameObject.AddComponent<AudioSource>();
             }
         }
 
         public void PlayHoverSound() {
-            audioSource.PlayOneShot(hoverSound);
+            _audioSource.PlayOneShot(hoverSound);
         }
 
         public void PlayClickSound() {
-            audioSource.PlayOneShot(clickSound);
+            _audioSource.PlayOneShot(clickSound);
         }
         public void PlayExitSound() {
-            audioSource.PlayOneShot(exitSound);
+            _audioSource.PlayOneShot(exitSound);
         }
     }
 }

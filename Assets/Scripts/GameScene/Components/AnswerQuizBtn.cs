@@ -7,15 +7,15 @@ namespace GameScene.Components
     {
         public string option;
 
-        private Quiz quizScript;
+        private Quiz _quizScript;
 
         private void Start() {
-            quizScript = GameObject.FindObjectOfType<Quiz>();
+            _quizScript = FindObjectOfType<Quiz>();
             GetComponent<Button>().onClick.AddListener(OnClick);
         }
 
         private void OnClick() {
-            quizScript.CheckAnswer(option);
+            _quizScript.CheckAnswer(option);
         }
     }
 }

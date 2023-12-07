@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/DeathScene.unity
     guid: 51ed99e873ed2d640842fbf47f437cac
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/GameSecne.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Badend.unity

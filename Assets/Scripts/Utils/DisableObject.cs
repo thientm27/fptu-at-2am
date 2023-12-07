@@ -1,22 +1,24 @@
 using System.Collections;
-
 using UnityEngine;
 
-public class DisableObject : MonoBehaviour
+namespace Utils
 {
-    public GameObject Obj;
-    public float activeTime;
+    public class DisableObject : MonoBehaviour
+    {
+        public GameObject obj;
+        public float activeTime;
 
-    void Update()
-    {
-        if (Obj.activeInHierarchy)
+        void Update()
         {
-            StartCoroutine(Disableobj());
+            if (obj.activeInHierarchy)
+            {
+                StartCoroutine(Disableobj());
+            }
         }
-    }
-    IEnumerator Disableobj()
-    {
-        yield return new WaitForSeconds(activeTime);
-        Obj.SetActive(false);
+        IEnumerator Disableobj()
+        {
+            yield return new WaitForSeconds(activeTime);
+            obj.SetActive(false);
+        }
     }
 }

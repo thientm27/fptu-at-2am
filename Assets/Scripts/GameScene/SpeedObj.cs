@@ -1,59 +1,62 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class SpeedObj : MonoBehaviour {
-    public GameObject speedObject;
-    public SC_FPSController fpsController;
-    public AudioSource pickupSound;
-    private bool interactable;
-    private bool isBoosting = false;
+namespace GameScene
+{
+    public class SpeedObj : MonoBehaviour
+    {
+        public GameObject speedObject;
+        public SC_FPSController fpsController;
+        public AudioSource pickupSound;
+        private bool interactable;
+        private bool isBoosting = false;
 
-    void OnTriggerStay(Collider other) {
-        if (other.CompareTag("Player")) {
-            interactable = true;
+        void OnTriggerStay(Collider other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                interactable = true;
+            }
         }
-    }
-    void OnTriggerExit(Collider other) {
-        if (other.CompareTag("Player")) {
-            interactable = false;
+
+        void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                interactable = false;
+            }
         }
-    }
-    // Start is called before the first frame update
-    void Start() {
 
-    }
+        float _originalWalkingSpeed;
+        float _originalRunningSpeed;
 
-    float originalWalkingSpeed;
-    float originalRunningSpeed;
+        // Update is called once per frame
+        void Update()
+        {
+            if (interactable && !isBoosting)
+            {
+                isBoosting = true;
+                speedObject.SetActive(true);
+                this.gameObject.SetActive(false);
+                pickupSound.Play();
+                interactable = false;
 
-    // Update is called once per frame
-    void Update() {
-        if (interactable && !isBoosting) {
-            isBoosting = true;
-            speedObject.SetActive(true);
-            this.gameObject.SetActive(false);
-            pickupSound.Play();
-            interactable = false;
+                _originalWalkingSpeed = fpsController.walkingSpeed;
+                _originalRunningSpeed = fpsController.runningSpeed;
 
-            originalWalkingSpeed = fpsController.walkingSpeed;
-            originalRunningSpeed = fpsController.runningSpeed;
+                fpsController.walkingSpeed += 3;
+                fpsController.runningSpeed += 6;
 
-            fpsController.walkingSpeed += 3;
-            fpsController.runningSpeed += 6;
-
-            Invoke("DeactivateBoost", 15f);
+                Invoke("DeactivateBoost", 15f);
+            }
         }
-    }
-    void DeactivateBoost() {
 
-        fpsController.walkingSpeed = originalWalkingSpeed;
-        fpsController.runningSpeed = originalRunningSpeed;
+        void DeactivateBoost()
+        {
+            fpsController.walkingSpeed = _originalWalkingSpeed;
+            fpsController.runningSpeed = _originalRunningSpeed;
 
-        isBoosting = false;
-        speedObject.SetActive(false);
-
+            isBoosting = false;
+            speedObject.SetActive(false);
+        }
     }
 }

@@ -1,44 +1,46 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class StarObj : MonoBehaviour {
+public class StarObj : MonoBehaviour
+{
     public GameObject starObject;
-    private GameObject[] toadObjs;
+    private GameObject[] _toadObjs;
     public AudioSource pickupSound;
-    private bool interactable;
-    private bool isBoosting = false;
+    private bool _interactable;
+    private bool _isBoosting = false;
 
-    void OnTriggerStay(Collider other) {
-        if (other.CompareTag("Player")) {
-            interactable = true;
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            _interactable = true;
         }
     }
-    void OnTriggerExit(Collider other) {
-        if (other.CompareTag("Player")) {
-            interactable = false;
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            _interactable = false;
         }
     }
-    private void Awake() {
-    }
-    // Start is called before the first frame update
-    void Start() {
-        toadObjs = GameObject.FindGameObjectsWithTag("Toad");
+
+    void Start()
+    {
+        _toadObjs = GameObject.FindGameObjectsWithTag("Toad");
     }
 
-
-    // Update is called once per frame
-    void Update() {
-        if (interactable && !isBoosting) {
-            isBoosting = true;
+    void Update()
+    {
+        if (_interactable && !_isBoosting)
+        {
+            _isBoosting = true;
             starObject.SetActive(true);
             this.gameObject.SetActive(false);
             pickupSound.Play();
-            interactable = false;
+            _interactable = false;
 
-            foreach (GameObject toadObj in toadObjs) {
+            foreach (GameObject toadObj in _toadObjs)
+            {
                 AudioSource audio = toadObj.GetComponent<AudioSource>();
                 Light light = toadObj.GetComponent<Light>();
                 light.enabled = true;
@@ -48,15 +50,17 @@ public class StarObj : MonoBehaviour {
             Invoke("DeactivateBoost", 15f);
         }
     }
-    void DeactivateBoost() {
-        isBoosting = false;
+
+    void DeactivateBoost()
+    {
+        _isBoosting = false;
         starObject.SetActive(false);
-        foreach (GameObject toadObj in toadObjs) {
+        foreach (GameObject toadObj in _toadObjs)
+        {
             AudioSource audio = toadObj.GetComponent<AudioSource>();
             Light light = toadObj.GetComponent<Light>();
             light.enabled = false;
             audio.Pause();
         }
-
     }
 }

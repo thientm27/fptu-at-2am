@@ -2,6 +2,7 @@
 using System.Collections;using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using GameScene;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -31,7 +32,7 @@ public class Quiz : MonoBehaviour {
     public Button optionCButton;
     public Button optionDButton;
 
-    public jumpscareTrig jumpscareTrig;
+    public JumpscareTrig jumpscareTrig;
     public string scene;
     public GameObject tele1, tele2, tele3;
     
@@ -47,8 +48,7 @@ public class Quiz : MonoBehaviour {
     private Question[] questionsPRM;
 
     private void Awake() {
-        // Awake is called even if the script is disabled. 
-        // Tải câu hỏi và đáp án lên UI
+
         myQuestions = JSONReader.GetQuestion(quizJSON);
 
         questionsPRN = myQuestions.arrQuestions.Where(x => x.Subject.Equals("PRN")).ToArray();
@@ -58,8 +58,6 @@ public class Quiz : MonoBehaviour {
         questionsPRM = myQuestions.arrQuestions.Where(x => x.Subject.Equals("PRM")).ToArray();
     }
 
-    public void Start() {
-    }
 
     private static class JSONReader {
         public static Questions GetQuestion(TextAsset quizJSON) {

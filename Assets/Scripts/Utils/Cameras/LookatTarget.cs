@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Utils.Cameras;
 
 #pragma warning disable 649
 namespace UnityStandardAssets.Cameras
